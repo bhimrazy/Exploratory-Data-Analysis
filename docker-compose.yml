@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jupyter_lab:
+    image: jupyter/scipy-notebook
+    environment:
+      JUPYTER_TOKEN: "docker"
+    ports:
+      - "8888:8888"
+    command: "jupyter lab"
+    volumes:
+      - ${PWD}:/home/jovyan/work
